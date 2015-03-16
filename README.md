@@ -16,9 +16,9 @@ This script reads the VirtualHost file from Apache2.4 and parses it to create th
 cd /var/www/
 git clone https://github.com/Dunky13/PHP-Sitemap-Generator.git sitemap_generator
 ```
- *  #### Semi-automatic installation
+#### Semi-automatic installation
     Browse to your domain/sitemap_generator/install.php
- #### Manual Installation 
+#### Manual Installation 
 Add the following part at the bottom of the appropriate VirtualHost file:
 ```
 <IfModule mod_alias.c>
