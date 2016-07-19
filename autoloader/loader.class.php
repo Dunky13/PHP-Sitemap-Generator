@@ -39,7 +39,6 @@ function class_autoloader($class) {
 
 	}
 }
-
-spl_autoload_register('class_autoloader');
+spl_autoload_register(function($class){class_autoloader($class)});
 
 ?>
