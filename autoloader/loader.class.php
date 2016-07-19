@@ -32,13 +32,15 @@ function class_autoloader($class) {
 				require_once $full_path;
 				$serialized_paths = serialize($path_cache);
 				if ($serialized_paths != $path_cache)
-					file_put_contents($cache_file, $serialized_paths); 
+					file_put_contents($cache_file, $serialized_paths);
 				break;
 			}
-		}   
+		}
 
 	}
 }
-spl_autoload_register(function($class){class_autoloader($class)});
+spl_autoload_register(function ($class) {
+    class_autoloader($class);
+});
 
 ?>
