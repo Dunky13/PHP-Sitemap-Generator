@@ -1,10 +1,5 @@
 <?php
 //URL: http://www.sparky-san.com/efficient-convenient-autoloading-php/
-//$loaderFunc = "autoloader";//SERVER['HTTP_HOST']."autoload";
-
-/* function abc($class) {
-
-} */
 spl_autoload_register(function ($class) {
 	$class = strtolower($class);
 
@@ -29,7 +24,7 @@ spl_autoload_register(function ($class) {
 		require_once $path_cache[$class]; 
 	else {
 		/* Determine the location of the file within the $class_root and, if found, load and cache it */
-		
+
 		$directories = new RecursiveDirectoryIterator($class_root);
 		foreach(new RecursiveIteratorIterator($directories) as $file) {
 			if (strtolower($file->getFilename()) == $class_filename) {
